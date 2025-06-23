@@ -13,7 +13,7 @@ This module prepares ligands for LIE simulations by generating the necessary par
 - `generate_oplsa.py`: Script provided by QligFEP that must be pre-installed. It generates `.lib` and `.prm` files for each ligand.  
   - **Requires** Schrödinger software installed and the environment variable or path correctly set for its usage.
   - This script should be run from the corresponding ligand folder.
-  - `#` represents the ligand number identifier, for example `L1.pdb`, `L2.pdb`, etc.
+  - `#` represents the ligand number identifier, for example `1.pdb`, `2.pdb`, etc.
 - `bind_prm.py`: Custom script that processes OPLS parameters to create `OPLSA_#_all.prm`.
 - `copy_generate.py`: Script to copy and adapt input files with specific modifications for `boundary sphere` and `solvate` parameters for each ligand.
 - `generate_ligand_fep.py`: Script to generate `.fep` files for FEP calculations.
@@ -21,7 +21,7 @@ This module prepares ligands for LIE simulations by generating the necessary par
 
 ## Workflow
 
-1. Prepare `L#.pdb` files (where `#` is the ligand number).
+1. Prepare `#.pdb` files (where `#` is the ligand number).
 2. Have the `OPLS2005_all.prm` file ready.
 3. Run `generate_oplsa.py` to create `.lib` and `.prm` files.  
    **Note:** Requires Schrödinger installation and license.
