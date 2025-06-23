@@ -27,7 +27,7 @@ This module prepares ligands for LIE simulations by generating the necessary par
    **Note:** Requires Schrödinger installation and license.
 4. Run `bind_prm.py` to generate `OPLSA_#_all.prm`.
 5. Use `copy_generate.py` to adjust `boundary sphere` and `solvate` parameters for each ligand.
-6. Run `prepared.sh` to execute the preparation.
+6. Run `prepared.sh` to execute the preparation for create #_w.top #_w.pdb y #_w.log.
 7. Generate `.fep` files using `generate_ligand_fep.py`.
 
 ## Important Notes
