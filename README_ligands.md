@@ -35,4 +35,46 @@ This module prepares ligands for LIE simulations by generating the necessary par
 - Correct configuration of the Schrödinger path is necessary for `generate_oplsa.py` to work.
 - `lig.fep` is the base file required for Free Energy Perturbation.
 - `boundary sphere` and `solvate` parameters must be manually adjusted in `copy_generate.py` according to the characteristics of each ligand.
+---
 
+## Module 2 – Ligand Equilibration (LIE)
+
+This module performs the equilibration phase for each ligand prior to LIE simulations. It uses topology and FEP files generated in Module 1. The protocol follows a 3-step equilibration based on the methodology described by Warshel, with a total equilibration time of 40 ps.
+
+### Input Files
+
+- `#_w.top`: Topology file for each ligand in water (output from Module 1).
+- `#.fep`: FEP input file for each ligand.
+- `inputs-equilibration.py`: Custom script to automatically generate equilibration input files:
+  - `eq1.inp`: Minimization stage
+  - `eq2.inp`: Heating stage
+  - `eq3.inp`: Equilibration stage
+- `equilibration.sh`: SLURM batch script to execute all three equilibration stages per ligand.
+
+### Workflow
+
+1. Make sure the files `#_w.top` and `#.fep` are present in each ligand folder (`1/`, `2/`, etc.).
+
+2. Generate the equilibration input files in each folder:
+   
+   python inputs-equilibration.py This script will generate:
+    - 'eq1.inp'
+    -'eq2.inp'
+    -'eq3.inp'
+
+3. Submit the equilibration jobs for all ligands:
+   sbatch equilibration.sh This script will generate:
+   -'eq1_#.re': Restart file after minimization.
+   -'eq2_#.re': Restart file after heating.
+   -'eq3_#.re': Restart file after equilibration (used as input for production phase).
+
+### Notes
+ Equilibration stages:
+   -'eq1': Energy minimization
+   -'eq2': Heating from 0 K to target temperature (e.g., 300 K)
+   -'eq3': Constant temperature equilibration
+Total simulation time is 40 ps, typically split as:
+   -5 ps (eq1)
+   -10 ps (eq2)
+   -25 ps (eq3)
+Adjust equilibration parameters directly in inputs-equilibration.py as needed.

@@ -1,0 +1,31 @@
+[MD]
+steps                                         100 ! for total 40ps
+random_seed                                       1
+temperature                                       1
+initial_temperature                             0.1
+stepsize                                        1.0 ! 1ps
+bath_coupling                                     1
+separate_scaling                                 on
+lrf                                              on
+
+[cut-offs]
+solute_solute                                    10
+solvent_solvent                                  10
+solute_solvent                                   10
+
+[sphere]
+shell_radius                                   20.0
+shell_force                                    0.01 !Paper
+
+[solvent]
+polarisation                                     on
+polarisation_force                             20.0 
+
+[intervals]
+non_bond                                         25
+output                                           50
+
+[files]
+topology                                    3_w.top
+final                                      eq3_1.re
+fep                                         3.fep
