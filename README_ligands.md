@@ -59,9 +59,9 @@ This module performs the equilibration phase for each ligand prior to LIE simula
    
    python inputs-equilibration.py This script will generate:
    
-   -`eq1.inp`
-   -`eq2.inp`
-   -`eq3.inp`
+   - `eq1.inp`
+   - `eq2.inp`
+   - `eq3.inp`
 
 4. Submit the equilibration jobs for all ligands:
    sbatch equilibration.sh This script will generate:
