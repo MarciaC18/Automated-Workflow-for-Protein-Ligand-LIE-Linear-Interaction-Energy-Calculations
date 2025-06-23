@@ -73,8 +73,10 @@ This module performs the equilibration phase for each ligand prior to LIE simula
    -'eq1': Energy minimization
    -'eq2': Heating from 0 K to target temperature (e.g., 300 K)
    -'eq3': Constant temperature equilibration
+
 Total simulation time is 40 ps, typically split as:
-   -5 ps (eq1)
-   -10 ps (eq2)
-   -25 ps (eq3)
+   -'5 ps' (eq1)
+   -'10 p' (eq2)
+   -'25 ps' (eq3)
+   
 Adjust equilibration parameters directly in inputs-equilibration.py as needed.
