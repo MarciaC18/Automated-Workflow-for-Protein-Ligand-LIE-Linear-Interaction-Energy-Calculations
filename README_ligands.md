@@ -39,7 +39,7 @@ This module prepares ligands for LIE simulations by generating the necessary par
 
 # Module 2 – Ligand Equilibration (LIE)
 
-This module performs the equilibration phase for each ligand prior to LIE simulations. It uses topology and FEP files generated in Module 1. The protocol follows a 3-step equilibration based on the methodology described by Warshel, with a total equilibration time of 40 ps.
+This module performs the equilibration phase for each ligand prior to LIE simulations. It uses topology and FEP files generated in Module 1. The protocol follows a 3-step equilibration based on the methodology.
 
 ### Input Files
 
