@@ -128,17 +128,17 @@ For each ligand, the production run will generate:
 
 -`ligand_#/2/production_#-2.log`: Log file from production run 2.
 
--`pro1_#.re`: Restart file after production run 1.
+-`prod1_#.re`: Restart file after production run 1.
 
--`pro1_#.dcd`: Trajectory file after production run 1.
+-`prod1_#.dcd`: Trajectory file after production run 1.
 
--`pro1_#.en`: Energy file after production run 1.
+-`prod1_#.en`: Energy file after production run 1.
 
--`pro2_#.re`: Restart file after production run 2.
+-`prod2_#.re`: Restart file after production run 2.
 
--`pro2_#.dcd`: Trajectory file after production run 2.
+-`prod2_#.dcd`: Trajectory file after production run 2.
 
--`pro2_#.en`: Energy file after production run 2.
+-`prod2_#.en`: Energy file after production run 2.
 
 ### Notes
 
