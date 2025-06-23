@@ -4,7 +4,7 @@ This module prepares ligands for LIE simulations by generating the necessary par
 
 ## Input Files
 
-- `L#.pdb`: PDB file for each ligand (where `#` is the ligand number). These files should come from crystallography or docking with prior preparation (e.g., using Schrödinger’s LigPrep).
+- `#.pdb`: PDB file for each ligand (where `#` is the ligand number). These files should come from crystallography or docking with prior preparation (e.g., using Schrödinger’s LigPrep).
 - `OPLS2005_all.prm`: Base OPLS parameter file required to generate specific ligand parameters.
 - `lig.fep`: Base file for Free Energy Perturbation (FEP).
 
@@ -57,7 +57,7 @@ This module performs the equilibration phase for each ligand prior to LIE simula
 
 2. Generate the equilibration input files in each folder:
    
-   python inputs-equilibration.py This script will generate:
+   `python inputs-equilibration.py` This script will generate:
 <<<<<<< HEAD
    
 -`eq1.inp`
@@ -72,7 +72,7 @@ This module performs the equilibration phase for each ligand prior to LIE simula
 
 3. Submit the equilibration jobs for all ligands:
 
-   sbatch equilibration.sh This script will generate:
+   `sbatch equilibration.sh` This script will generate:
 
     - `eq1_#.re`: Restart file after minimization.
     - `eq2_#.re`: Restart file after heating.
@@ -81,15 +81,6 @@ This module performs the equilibration phase for each ligand prior to LIE simula
 
 ### Notes
  Equilibration stages:
-
-   -'eq1': Energy minimization
-   -'eq2': Heating from 0 K to target temperature (e.g., 300 K)
-   -'eq3': Constant temperature equilibration
-
-Total simulation time is 40 ps, typically split as:
-   '5 ps' (eq1)
-   '10 p' (eq2)
-   '25 ps' (eq3)
    
     -`eq1`: Energy minimization
     -`eq2`: Heating from 0 K to target temperature (e.g., 300 K)
@@ -121,11 +112,11 @@ This module performs the production phase of the LIE simulations for each ligand
 
 2. Generate production input files:
 
-   python generate_production_inputs.py
+   python `generate_production_inputs.py`
 
 3. Submit the production jobs to the cluster for a 20 ps simulation following Singh and Warshel (2010):
    
-   sbatch prueba_prod.sh
+   sbatch `prueba_prod.sh`
 
 4. Monitor the job status and wait for completion.
 
