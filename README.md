@@ -217,6 +217,55 @@ sbatch analyze_LIE_ligands.sh
   Log files with detailed output of the calculations.
 
 Make sure all required input folders and files are correctly set up before running the script to avoid errors.
+---
+# 3. LIE Calculation Analysis
+
+### 3.1 Evaluation of the Accuracy and Precision of Calculated ΔG vs. Experimental ΔG
+
+**Objective:**  
+Assess the predictive quality of the calculated binding free energies (ΔG<sub>calc</sub>) by analyzing their correlation and error against the experimental values (ΔG<sub>exp</sub>).
+
+**How to Run:**  
+Execute the regression analysis with the following command:
+
+```bash
+python DG_regression_reference_ligands.py
+```
+## Inputs
+
+Within the script, modify the following arrays to match your reference ligand data:
+
+```python
+DG_exp = np.array([-8.7, -11.18, -11.46])   # Experimental ΔG values
+DG_calc = np.array([-8.39, -11.56, -12.56]) # Calculated ΔG values
+std_dev = np.array([0.45, 0.32, 0.55])      # Standard deviations for ΔG_calc
+```
+## Requirements
+
+A Python environment with the following libraries installed:
+
+- numpy
+- matplotlib
+- seaborn
+- scikit-learn
+
+---
+
+## Output
+
+`DG_regression_for_references.png`
+
+This high-resolution plot visualizes the linear regression between ΔG<sub>exp</sub> and ΔG<sub>calc</sub> for reference ligands.  
+It includes:
+
+- Error bars based on standard deviations.
+- Regression line with equation.
+- Key metrics:
+  - Coefficient of determination (R²)
+  - Mean Absolute Error (MAE)
+  - Root Mean Square Error (RMSE)
+
+Use this analysis to evaluate the reliability of your LIE-calculated binding energies before proceeding with predictions for new ligands.
 
 
 
