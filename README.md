@@ -67,6 +67,11 @@ individuals_plot/
 └── production2_#_plot.png
 ```
 Each plot helps verify whether the interaction energy errors are **< 1 kcal/mol** .
+
+To get a summary of interaction energy errors >1 kcal/mol, run:
+```bash
+python check_high_errors.py
+``` 
 A summary of simulations with error > 1 kcal/mol is saved in:
 ```bash
 individuals_plot/high_errors_report.txt
@@ -111,9 +116,9 @@ python prueba_2.py
 - `check_errors/1.ligprep/production_ligands.sh`
 -`check_errors/complex/production_complex.sh`
 
--`../../ligands/#_w.top`
--`../../ligands/eq#_3.re`
--`../../ligands/#.fep`
+- `../../ligands/#_w.top`
+- `../../ligands/eq#_3.re`
+- `../../ligands/#.fep`
 
 - `../../complex/complex_#_w.top`
 - `../../complex/eq3_#.re`
@@ -154,9 +159,11 @@ sbatch production_complex.sh
 In this step, repeat **Step 1: Plot Interaction Energies** and check again:
 
 - `individuals_plot/high_errors_report.txt`
-- `individuals_plot/`
-  ├── `production1_#_plot.png`
-  └── `production2_#_plot.png`
+```bash
+- individuals_plot/
+  ├── production1_#_plot.png
+  └── production2_#_plot.png
+  ```
 
 Continue extending the MD until the error is < 1 kcal/mol.
 

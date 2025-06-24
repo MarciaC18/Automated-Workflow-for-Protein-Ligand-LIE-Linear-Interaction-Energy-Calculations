@@ -1,0 +1,305 @@
+Ejecutando ligando 1...
+Ligand EL_w: -594.8969077306732 VDW_w: -10.745311720698254
+Complex EL_w: -517.7699002493765 VDW_w: 6.848877805486284
+Complex EL_p: -42.097007481296764 VDW_p: -31.586708229426435
+✅ LIGAND: ligand_1
+ΔG = -5.66 ± 0.79 kcal/mol
+✅ Resultados guardados en: results/LIE_result_1.csv
+Ligando 1 terminado.
+Ejecutando ligando 2...
+Ligand EL_w: -139.81488778054862 VDW_w: -40.71718204488778
+Complex EL_w: -90.50977556109726 VDW_w: -14.053541147132169
+Complex EL_p: -50.02915211970075 VDW_p: -53.10192019950125
+✅ LIGAND: ligand_2
+ΔG = -18.06 ± 0.36 kcal/mol
+✅ Resultados guardados en: results/LIE_result_2.csv
+Ligando 2 terminado.
+Ejecutando ligando 3...
+Ligand EL_w: -150.09334164588532 VDW_w: -50.9896259351621
+Complex EL_w: -135.88226932668329 VDW_w: -28.842244389027428
+Complex EL_p: -33.71089775561097 VDW_p: -45.36720698254364
+✅ LIGAND: ligand_3
+ΔG = -17.93 ± 0.41 kcal/mol
+✅ Resultados guardados en: results/LIE_result_3.csv
+Ligando 3 terminado.
+Ejecutando ligando 4...
+Ligand EL_w: -209.4369077306733 VDW_w: -19.777506234413966
+Complex EL_w: -164.9748379052369 VDW_w: -2.941820448877805
+Complex EL_p: -8.731521197007481 VDW_p: -36.65810473815462
+✅ LIGAND: ligand_4
+ΔG = -9.55 ± 0.31 kcal/mol
+✅ Resultados guardados en: results/LIE_result_4.csv
+Ligando 4 terminado.
+Ejecutando ligando 5...
+Ligand EL_w: -18.4584289276808 VDW_w: -30.795012468827927
+Complex EL_w: -7.587032418952619 VDW_w: -12.405486284289278
+Complex EL_p: -2.639775561097257 VDW_p: -31.10029925187032
+✅ LIGAND: ligand_5
+ΔG = -7.74 ± 0.30 kcal/mol
+✅ Resultados guardados en: results/LIE_result_5.csv
+Ligando 5 terminado.
+Ejecutando ligando 6...
+Ligand EL_w: -30.97862842892768 VDW_w: -24.093965087281795
+Complex EL_w: -15.21149625935162 VDW_w: -7.642593516209476
+Complex EL_p: -4.904912718204488 VDW_p: -34.13536159600998
+✅ LIGAND: ligand_6
+ΔG = -10.83 ± 0.19 kcal/mol
+✅ Resultados guardados en: results/LIE_result_6.csv
+Ligando 6 terminado.
+Ejecutando ligando 7...
+Ligand EL_w: -46.77224438902743 VDW_w: -34.86224438902743
+Complex EL_w: -34.351097256857855 VDW_w: -16.281047381546138
+Complex EL_p: -2.4282044887780545 VDW_p: -36.9473566084788
+✅ LIGAND: ligand_7
+ΔG = -11.39 ± 0.52 kcal/mol
+✅ Resultados guardados en: results/LIE_result_7.csv
+Ligando 7 terminado.
+Ejecutando ligando 8...
+Ligand EL_w: -64.06032418952618 VDW_w: -29.024413965087284
+Complex EL_w: -36.22568578553616 VDW_w: -10.914937655860347
+Complex EL_p: -9.85072319201995 VDW_p: -34.38426433915212
+✅ LIGAND: ligand_8
+ΔG = -9.09 ± 0.31 kcal/mol
+✅ Resultados guardados en: results/LIE_result_8.csv
+Ligando 8 terminado.
+Ejecutando ligando 9...
+Ligand EL_w: -59.27399002493766 VDW_w: -44.41102244389028
+Complex EL_w: -36.310324189526185 VDW_w: -23.333940149625935
+Complex EL_p: -11.420374064837905 VDW_p: -38.91957605985037
+✅ LIGAND: ligand_9
+ΔG = -10.86 ± 0.36 kcal/mol
+✅ Resultados guardados en: results/LIE_result_9.csv
+Ligando 9 terminado.
+Ejecutando ligando 10...
+Ligand EL_w: -38.79907730673317 VDW_w: -36.157157107231924
+Complex EL_w: -28.383840399002494 VDW_w: -16.331197007481297
+Complex EL_p: -3.4168079800498754 VDW_p: -34.03840399002494
+✅ LIGAND: ligand_10
+ΔG = -8.89 ± 0.39 kcal/mol
+✅ Resultados guardados en: results/LIE_result_10.csv
+Ligando 10 terminado.
+Ejecutando ligando 11...
+Ligand EL_w: -1.170573566084788 VDW_w: -8.032294264339152
+Complex EL_w: -0.8926932668329177 VDW_w: -2.8438403990024934
+Complex EL_p: 0.1889775561097257 VDW_p: -8.965286783042394
+✅ LIGAND: ligand_11
+ΔG = -2.52 ± 0.12 kcal/mol
+✅ Resultados guardados en: results/LIE_result_11.csv
+Ligando 11 terminado.
+Ejecutando ligando 12...
+Ligand EL_w: -187.73453865336654 VDW_w: -24.016583541147135
+Complex EL_w: -160.10596009975063 VDW_w: -4.530947630922693
+Complex EL_p: -0.7825685785536158 VDW_p: -35.91588528678304
+✅ LIGAND: ligand_12
+ΔG = -8.22 ± 0.50 kcal/mol
+✅ Resultados guardados en: results/LIE_result_12.csv
+Ligando 12 terminado.
+Ejecutando ligando 13...
+Ligand EL_w: -25.013690773067328 VDW_w: -34.51675810473815
+Complex EL_w: -16.69194513715711 VDW_w: -13.631022443890277
+Complex EL_p: -3.462693266832918 VDW_p: -34.011820448877806
+✅ LIGAND: ligand_13
+ΔG = -8.39 ± 0.36 kcal/mol
+✅ Resultados guardados en: results/LIE_result_13.csv
+Ligando 13 terminado.
+Ejecutando ligando 14...
+Ligand EL_w: -130.25473815461348 VDW_w: -21.86593516209476
+Complex EL_w: -110.77875311720697 VDW_w: -6.03790523690773
+Complex EL_p: -43.95625935162096 VDW_p: -26.329700748129678
+✅ LIGAND: ligand_14
+ΔG = -9.83 ± 0.39 kcal/mol
+✅ Resultados guardados en: results/LIE_result_14.csv
+Ligando 14 terminado.
+Ejecutando ligando 15...
+Ligand EL_w: -35.77837905236908 VDW_w: -31.611072319202
+Complex EL_w: -30.48366583541147 VDW_w: -14.030324189526183
+Complex EL_p: -0.5336159600997507 VDW_p: -34.88805486284289
+✅ LIGAND: ligand_15
+ΔG = -11.25 ± 0.33 kcal/mol
+✅ Resultados guardados en: results/LIE_result_15.csv
+Ligando 15 terminado.
+Ejecutando ligando 16...
+Ligand EL_w: -40.08271820448878 VDW_w: -38.672468827930174
+Complex EL_w: -26.31630922693267 VDW_w: -16.648628428927683
+Complex EL_p: -1.5833915211970075 VDW_p: -42.63680798004987
+✅ LIGAND: ligand_16
+ΔG = -12.68 ± 0.34 kcal/mol
+✅ Resultados guardados en: results/LIE_result_16.csv
+Ligando 16 terminado.
+Ejecutando ligando 17...
+Ligand EL_w: -47.96730673316708 VDW_w: -24.62501246882793
+Complex EL_w: -34.61361596009976 VDW_w: -8.893142144638404
+Complex EL_p: -0.09074812967581046 VDW_p: -35.2083042394015
+✅ LIGAND: ligand_17
+ΔG = -11.79 ± 0.36 kcal/mol
+✅ Resultados guardados en: results/LIE_result_17.csv
+Ligando 17 terminado.
+Ejecutando ligando 18...
+Ligand EL_w: -27.147032418952616 VDW_w: -28.46937655860349
+Complex EL_w: -22.84087281795511 VDW_w: -14.474014962593516
+Complex EL_p: -1.7368827930174564 VDW_p: -27.467680798004988
+✅ LIGAND: ligand_18
+ΔG = -8.88 ± 0.20 kcal/mol
+✅ Resultados guardados en: results/LIE_result_18.csv
+Ligando 18 terminado.
+Ejecutando ligando 19...
+Ligand EL_w: -168.25331670822942 VDW_w: -23.61361596009975
+Complex EL_w: -129.76852867830425 VDW_w: -8.95221945137157
+Complex EL_p: -20.79022443890274 VDW_p: -28.34044887780549
+✅ LIGAND: ligand_19
+ΔG = -7.36 ± 0.28 kcal/mol
+✅ Resultados guardados en: results/LIE_result_19.csv
+Ligando 19 terminado.
+Ejecutando ligando 20...
+Ligand EL_w: -339.02952618453867 VDW_w: -13.879226932668331
+Complex EL_w: -301.1572319201995 VDW_w: 1.9294763092269327
+Complex EL_p: -8.29995012468828 VDW_p: -32.858104738154616
+✅ LIGAND: ligand_20
+ΔG = -8.34 ± 0.52 kcal/mol
+✅ Resultados guardados en: results/LIE_result_20.csv
+Ligando 20 terminado.
+Ejecutando ligando 21...
+Ligand EL_w: -51.70982543640898 VDW_w: -34.23650872817955
+Complex EL_w: -46.24274314214464 VDW_w: -17.154638403990024
+Complex EL_p: -5.742394014962594 VDW_p: -42.249476309226935
+✅ LIGAND: ligand_21
+ΔG = -17.14 ± 0.66 kcal/mol
+✅ Resultados guardados en: results/LIE_result_21.csv
+Ligando 21 terminado.
+Ejecutando ligando 22...
+Ligand EL_w: -110.61174563591022 VDW_w: -17.130648379052367
+Complex EL_w: -118.56294264339152 VDW_w: -4.069276807980049
+Complex EL_p: 11.852294264339154 VDW_p: -21.954014962593515
+✅ LIGAND: ligand_22
+ΔG = -5.62 ± 0.24 kcal/mol
+✅ Resultados guardados en: results/LIE_result_22.csv
+Ligando 22 terminado.
+Ejecutando ligando 23...
+Ligand EL_w: -35.28725685785536 VDW_w: -41.085211970074816
+Complex EL_w: -28.067057356608476 VDW_w: -20.174463840399003
+Complex EL_p: 1.2423441396508728 VDW_p: -38.77997506234414
+✅ LIGAND: ligand_23
+ΔG = -11.22 ± 0.38 kcal/mol
+✅ Resultados guardados en: results/LIE_result_23.csv
+Ligando 23 terminado.
+Ejecutando ligando 24...
+Ligand EL_w: -36.97007481296758 VDW_w: -30.48084788029925
+Complex EL_w: -28.80568578553616 VDW_w: -13.422019950124687
+Complex EL_p: -6.072294264339152 VDW_p: -27.66423940149626
+✅ LIGAND: ligand_24
+ΔG = -6.98 ± 0.28 kcal/mol
+✅ Resultados guardados en: results/LIE_result_24.csv
+Ligando 24 terminado.
+Ejecutando ligando 25...
+Ligand EL_w: -233.932319201995 VDW_w: -34.95129675810474
+Complex EL_w: -159.49286783042393 VDW_w: -22.858553615960098
+Complex EL_p: -12.335461346633418 VDW_p: -30.000349127182044
+✅ LIGAND: ligand_25
+ΔG = -5.35 ± 0.59 kcal/mol
+✅ Resultados guardados en: results/LIE_result_25.csv
+Ligando 25 terminado.
+Ejecutando ligando 26...
+Ligand EL_w: -190.710897755611 VDW_w: -56.28688279301746
+Complex EL_w: -159.04331670822944 VDW_w: -39.47336658354114
+Complex EL_p: -15.378304239401496 VDW_p: -36.98461346633417
+✅ LIGAND: ligand_26
+ΔG = -11.92 ± 0.55 kcal/mol
+✅ Resultados guardados en: results/LIE_result_26.csv
+Ligando 26 terminado.
+Ejecutando ligando 27...
+Ligand EL_w: -8.781895261845387 VDW_w: -10.240374064837903
+Complex EL_w: -2.6704239401496257 VDW_w: -4.192718204488778
+Complex EL_p: -4.707880299251871 VDW_p: -12.404638403990026
+✅ LIGAND: ligand_27
+ΔG = -4.17 ± 0.12 kcal/mol
+✅ Resultados guardados en: results/LIE_result_27.csv
+Ligando 27 terminado.
+Ejecutando ligando 28...
+Ligand EL_w: -206.62304239401496 VDW_w: -24.866508728179554
+Complex EL_w: -148.8648379052369 VDW_w: -8.939526184538654
+Complex EL_p: -16.39279301745636 VDW_p: -33.776583541147126
+✅ LIGAND: ligand_28
+ΔG = -7.59 ± 0.57 kcal/mol
+✅ Resultados guardados en: results/LIE_result_28.csv
+Ligando 28 terminado.
+Ejecutando ligando 29...
+Ligand EL_w: -59.46256857855361 VDW_w: -37.71683291770573
+Complex EL_w: -51.43768079800499 VDW_w: -15.992518703241895
+Complex EL_p: -0.2525685785536159 VDW_p: -34.48845386533666
+✅ LIGAND: ligand_29
+ΔG = -7.82 ± 0.38 kcal/mol
+✅ Resultados guardados en: results/LIE_result_29.csv
+Ligando 29 terminado.
+Ejecutando ligando 30...
+Ligand EL_w: -7.5452119700748135 VDW_w: -8.750822942643392
+Complex EL_w: -3.796109725685786 VDW_w: -4.0956608478803
+Complex EL_p: -4.535261845386533 VDW_p: -7.803890274314215
+✅ LIGAND: ligand_30
+ΔG = -2.23 ± 0.18 kcal/mol
+✅ Resultados guardados en: results/LIE_result_30.csv
+Ligando 30 terminado.
+Ejecutando ligando 31...
+Ligand EL_w: -32.78027431421446 VDW_w: -24.876034912718207
+Complex EL_w: -9.603117206982544 VDW_w: -10.669650872817954
+Complex EL_p: -9.35793017456359 VDW_p: -29.244239401496262
+✅ LIGAND: ligand_31
+ΔG = -8.71 ± 0.22 kcal/mol
+✅ Resultados guardados en: results/LIE_result_31.csv
+Ligando 31 terminado.
+Ejecutando ligando 32...
+Ligand EL_w: -174.05451371571073 VDW_w: -31.82775561097257
+Complex EL_w: -118.87426433915212 VDW_w: -13.804763092269328
+Complex EL_p: -32.35236907730673 VDW_p: -34.88548628428928
+✅ LIGAND: ligand_32
+ΔG = -8.96 ± 0.47 kcal/mol
+✅ Resultados guardados en: results/LIE_result_32.csv
+Ligando 32 terminado.
+Ejecutando ligando 33...
+Ligand EL_w: -5.525411471321695 VDW_w: -10.424264339152117
+Complex EL_w: -2.5409725685785536 VDW_w: -4.730748129675811
+Complex EL_p: -3.2086783042394016 VDW_p: -10.42643391521197
+✅ LIGAND: ligand_33
+ΔG = -3.24 ± 0.23 kcal/mol
+✅ Resultados guardados en: results/LIE_result_33.csv
+Ligando 33 terminado.
+Ejecutando ligando 34...
+Ligand EL_w: -139.60366583541148 VDW_w: -19.842942643391524
+Complex EL_w: -108.13932668329176 VDW_w: -3.6931670822942646
+Complex EL_p: -11.092593516209476 VDW_p: -29.640648379052372
+✅ LIGAND: ligand_34
+ΔG = -6.93 ± 0.24 kcal/mol
+✅ Resultados guardados en: results/LIE_result_34.csv
+Ligando 34 terminado.
+Ejecutando ligando 35...
+Ligand EL_w: -242.36384039900253 VDW_w: -73.81204488778054
+Complex EL_w: -297.21556109725685 VDW_w: -68.09673316708229
+Complex EL_p: -14.356658354114714 VDW_p: -25.442294264339154
+✅ LIGAND: ligand_35
+ΔG = -21.03 ± 0.47 kcal/mol
+✅ Resultados guardados en: results/LIE_result_35.csv
+Ligando 35 terminado.
+Ejecutando ligando 36...
+Ligand EL_w: -55.449800498753106 VDW_w: -24.35139650872818
+Complex EL_w: -35.76743142144639 VDW_w: -8.398229426433915
+Complex EL_p: -14.898952618453864 VDW_p: -28.23067331670823
+✅ LIGAND: ligand_36
+ΔG = -7.82 ± 0.50 kcal/mol
+✅ Resultados guardados en: results/LIE_result_36.csv
+Ligando 36 terminado.
+Ejecutando ligando 37...
+Ligand EL_w: -16.749675810473814 VDW_w: -37.80615960099751
+Complex EL_w: -11.426783042394016 VDW_w: -18.773291770573568
+Complex EL_p: -2.569750623441396 VDW_p: -33.23483790523691
+✅ LIGAND: ligand_37
+ΔG = -9.35 ± 0.42 kcal/mol
+✅ Resultados guardados en: results/LIE_result_37.csv
+Ligando 37 terminado.
+Ejecutando ligando 38...
+Ligand EL_w: -162.14720698254365 VDW_w: -24.35271820448878
+Complex EL_w: -136.5678054862843 VDW_w: -6.25648379052369
+Complex EL_p: -2.264214463840399 VDW_p: -31.875187032418953
+✅ LIGAND: ligand_38
+ΔG = -6.81 ± 0.44 kcal/mol
+✅ Resultados guardados en: results/LIE_result_38.csv
+Ligando 38 terminado.
+Todos los ligandos procesados.

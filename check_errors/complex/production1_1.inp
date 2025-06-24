@@ -1,0 +1,43 @@
+[MD]
+steps                                                              40000 ! for total 40ps ! for total 20ps
+!random_seed                                       1
+temperature                                     300
+!initial_temperature                             0.1
+stepsize                                        1.0 ! 1ps
+bath_coupling                                   100
+separate_scaling                                 on
+lrf                                              on
+!shake_all_hydrogens                             on
+!shake_solvent                                   on
+
+[cut-offs]
+solute_solute                                    10
+solvent_solvent                                  10
+solute_solvent                                   10
+!q_atom                                           99
+
+[sphere]
+shell_radius                                   20.0
+shell_force                                    0.01 !Paper
+
+[solvent]
+!radial_force                                    60.0
+polarisation                                     on
+polarisation_force                             20.0 
+
+[intervals]
+non_bond                                         25
+output                                           50
+energy                                           10
+trajectory                                    10000
+
+[files]
+topology                            ../../complex/complex_1_w.top 
+restart                                    ../../complex/eq3_1.re 
+final                            prod1_complex_1.re 
+fep                                          ../../complex/1.fep 
+trajectory                      prod1_complex_1.dcd 
+energy                           prod1_complex_1.en 
+
+![sequence_restraints] ! there are restrainsts with the sphere
+!1 70 0.5 0 1

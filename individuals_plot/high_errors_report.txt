@@ -1,0 +1,163 @@
+Production log files with errors greater than 1 kcal/mol
+-------------------------------------------------------
+
+File: complex/complex_2/1/production1_2.log
+Error type: Electrostatic = 2.88 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_2/2/production2_2.log
+Error type: Electrostatic = 2.88 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_3/1/production1_3.log
+Error type: Electrostatic = 2.10 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_3/2/production2_3.log
+Error type: Electrostatic = 2.10 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_7/1/production1_7.log
+Error type: vdW = 1.25 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_7/2/production2_7.log
+Error type: vdW = 1.25 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_8/1/production1_8.log
+Error type: Electrostatic = 1.82 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_8/2/production2_8.log
+Error type: Electrostatic = 1.82 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_12/1/production1_12.log
+Error type: Electrostatic = 1.89 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_12/2/production2_12.log
+Error type: Electrostatic = 1.89 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_14/1/production1_14.log
+Error type: Electrostatic = 2.28 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_14/2/production2_14.log
+Error type: Electrostatic = 2.28 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_15/1/production1_15.log
+Error type: Electrostatic = 1.97 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_15/2/production2_15.log
+Error type: Electrostatic = 1.97 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_19/1/production1_19.log
+Error type: Electrostatic = 4.30 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_19/2/production2_19.log
+Error type: Electrostatic = 4.30 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_20/1/production1_20.log
+Error type: Electrostatic = 2.37 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_20/2/production2_20.log
+Error type: Electrostatic = 2.37 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_25/1/production1_25.log
+Error type: Electrostatic = 7.27 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_25/2/production2_25.log
+Error type: Electrostatic = 7.27 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_26/1/production1_26.log
+Error type: Electrostatic = 1.36 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_26/2/production2_26.log
+Error type: Electrostatic = 1.36 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_28/1/production1_28.log
+Error type: vdW = 1.03 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_28/1/production1_28.log
+Error type: Electrostatic = 7.82 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_28/2/production2_28.log
+Error type: vdW = 1.03 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_28/2/production2_28.log
+Error type: Electrostatic = 7.82 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_29/1/production1_29.log
+Error type: Electrostatic = 1.02 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_29/2/production2_29.log
+Error type: Electrostatic = 1.02 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_32/1/production1_32.log
+Error type: Electrostatic = 3.36 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_32/2/production2_32.log
+Error type: Electrostatic = 3.36 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_34/1/production1_34.log
+Error type: Electrostatic = 1.80 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_34/2/production2_34.log
+Error type: Electrostatic = 1.80 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_35/1/production1_35.log
+Error type: Electrostatic = 4.92 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_35/2/production2_35.log
+Error type: Electrostatic = 4.92 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_36/1/production1_36.log
+Error type: vdW = 1.28 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_36/1/production1_36.log
+Error type: Electrostatic = 1.45 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_36/2/production2_36.log
+Error type: vdW = 1.28 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_36/2/production2_36.log
+Error type: Electrostatic = 1.45 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_38/1/production1_38.log
+Error type: Electrostatic = 2.25 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
+File: complex/complex_38/2/production2_38.log
+Error type: Electrostatic = 2.25 kcal/mol
+Recommendation: Extend the MD simulation until the error is below 1 kcal/mol.
+
