@@ -33,7 +33,7 @@ git clone https://github.com/MarciaC18/Automated-Workflow-for-Protein-Ligand-LIE
 # 1. Evaluation and Verification of van der Waals and Electrostatic Interactions
 ---
 
-### `check_errors` Protocol
+### Check_errors Protocol
 
 To ensure valid LIE calculations, the production MD of the protein-ligand complexes must yield stable van der Waals and electrostatic interaction energies with error **< 1 kcal/mol**.
 
@@ -67,9 +67,13 @@ individuals_plot/
 └── production2_#_plot.png
 ```
 Each plot helps verify whether the interaction energy errors are **< 1 kcal/mol** .
-If yes, the MD is valid — proceed to number 2 (LIE Calculations).
+A summary of simulations with error > 1 kcal/mol is saved in:
+```bash
+individuals_plot/high_errors_report.txt
+```
+*** If yes, the MD is valid — proceed to number 2 (LIE Calculations).***
 
-If not, the MD must be extended - proceed to sept 2 (If Error > 1 kcal/mol — Extend the MD).
+*** If not, the MD must be extended - proceed to sept 2 (If Error > 1 kcal/mol — Extend the MD).***
 
 ## Step 2: If Error > 1 kcal/mol — Extend the MD
 
@@ -99,15 +103,9 @@ python prueba_2.py
     ├── production2_#.inp
     └── production_complex.sh
 ```
+*** In this protocol, we will use # to indicate the number of the ligand to be studied*** 
     
 2. Run Extended Production Simulations
-
-Navigate to each folder and run:
-
-```bash
-sbatch production_ligands.sh
-sbatch production_complex.sh
-```
 
 ## Inputs
 - `check_errors/1.ligprep/production_ligands.sh`
@@ -122,6 +120,13 @@ sbatch production_complex.sh
 - `../../complex/#.fep`
 
 *** Make sure the original ligands/ and complex/ folders are present and correctly populated. ***
+
+Navigate to each folder and run:
+
+```bash
+sbatch production_ligands.sh
+sbatch production_complex.sh
+```
 
 ## Outputs
 
@@ -145,6 +150,15 @@ sbatch production_complex.sh
 - `prod2_complex_#.re`
 - `prod2_complex_#.dcd`
 - `prod2_complex_#.en`
+
+In this step, repeat **Step 1: Plot Interaction Energies** and check again:
+
+- `individuals_plot/high_errors_report.txt`
+- `individuals_plot/`
+  ├── `production1_#_plot.png`
+  └── `production2_#_plot.png`
+
+Continue extending the MD until the error is < 1 kcal/mol.
 
 # 2. LIE Calculations
 
