@@ -160,7 +160,66 @@ In this step, repeat **Step 1: Plot Interaction Energies** and check again:
 
 Continue extending the MD until the error is < 1 kcal/mol.
 
-# 2. LIE Calculations
+# 2. Binding Free Energy Calculation Using the LIE Method
+
+### Objective
+Calculate the binding free energy (ΔG) between different ligands and a protein using the Linear Interaction Energy (LIE) method.
+
+---
+
+### Preparation
+
+Before running the LIE calculations, ensure the following folders exist in the root directory:
+
+- `logs/` — To store log files  
+- `results/` — To store output results  
+- `ligands/ligand_#/` — Folder with ligand data  
+- `complex/complex_#/` — Folder with protein-ligand complex data
+
+---
+
+### Required Scripts and Files
+
+- `analyze_LIE_noqgui.py` (custom script)  
+- `mdlog_energies.py` (external script from [Qgui GitHub](https://github.com/qusers/qgui/tree/Qgui3))  
+  - **Important:** This script must be placed in the root directory alongside the others. It is called by `analyze_LIE_noqgui.py`.  
+- `analyze_LIE_ligands.sh` (shell script to launch the analysis)
+
+---
+
+### Parameters
+
+You can modify the following parameters inside `analyze_LIE_ligands.sh` according to your needs:
+
+```bash
+--dg_exp 0.0 \
+--alpha 0.68 \
+--beta 0.11 \
+--gamma 0.0
+```
+
+## How to Run
+
+Execute the LIE calculation by submitting the job with Slurm:
+
+```bash
+sbatch analyze_LIE_ligands.sh
+```
+
+## Output
+
+- `results/LIE_result_#.csv`
+
+  Contains the calculated binding free energy (ΔG) values along with their Standard Error of the Mean (SEM).
+
+- `logs/*.log`
+
+  Log files with detailed output of the calculations.
+
+Make sure all required input folders and files are correctly set up before running the script to avoid errors.
+
+
+
 
 
 
