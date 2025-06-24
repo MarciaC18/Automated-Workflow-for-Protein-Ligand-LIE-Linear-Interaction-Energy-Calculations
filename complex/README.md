@@ -170,6 +170,77 @@ while `.log` files contain runtime information.
 | eq3   | Constant temperature equilibration   | 25 ps            |
 
 > You can adjust simulation durations and other parameters by editing `eq1.inp`, `eq2.inp`, and `eq3.inp` before running the workflow.
+---
+
+# Module 3: Production
+
+**Objective:**  
+This module performs the production phase of the LIE simulations for each ligand. It uses topology and equilibrated restart files generated in previous modules and runs molecular dynamics production runs to calculate binding free energies.  
+This module runs a replica because it is necessary for future free energy calculations with LIE.
+
+---
+
+### Inputs:
+- `production.inp`  
+- `production2.inp`  
+  *(These two files should always be present in this folder. You can copy them from the repository.  
+  If you need to change any production variables, edit these `.inp` files before generating more inputs in future steps.)*  
+- `complex_#_w.top` (output from Module 1)  
+- `#.fep` (output from Module 1)  
+- `eq3_#.re` (output from Module 2)  
+
+---
+
+### 1. Generate input files for each ligand
+
+Run:  
+```bash
+python generate_inp_files.py
+```
+### Inputs:
+
+- `production.inp`  
+- `production2.inp`  
+
+### Outputs:
+
+- `production1_#.inp`  
+- `production2_#.inp`  
+
+*(# corresponds to the ligand number in the protein-ligand complex)*
+
+---
+
+### 2. Run production simulations
+
+Run:
+
+```bash
+sbatch production.sh
+```
+### Inputs:
+
+- `production1_#.inp`  
+- `production2_#.inp`  
+- `complex_#_w.top`  
+- `#.fep`  
+- `eq3_#.re`  
+
+### Outputs:
+
+- `complex_#/1/production1_#.log`  
+- `complex_#/2/production2_#.log`  
+- `prod1_complex_#.re`  
+- `prod1_complex_#.dcd`  
+- `prod1_complex_#.en`  
+- `prod2_complex_#.re`  
+- `prod2_complex_#.dcd`  
+- `prod2_complex_#.en`  
+
+> **Note:** Outputs are saved inside `complex_#/1/` and `complex_#/2/` folders because this structure is necessary for the future review of stable van der Waals and electrostatic energies (with error <1 kcal/mol) and for consecutive LIE calculations.
+
+
+
 
 
 
