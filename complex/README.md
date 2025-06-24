@@ -95,9 +95,9 @@ Output:
 The file should be named `#.fep` where `#` matches the complex number.
 
 ---
-## Module 2 - Equilibration
+# Module 2 - Equilibration
 
-### Objective
+## Objective
 This module performs the equilibration phase for each protein–ligand complex prior to LIE (Linear Interaction Energy) simulations. It uses topology and FEP files generated in **Module 1** and produces restart (`.re`) files needed for production simulations in the next module.
 
 ---
@@ -172,9 +172,9 @@ while `.log` files contain runtime information.
 > You can adjust simulation durations and other parameters by editing `eq1.inp`, `eq2.inp`, and `eq3.inp` before running the workflow.
 ---
 
-# Module 3: Production
+# Module 3 - Production
 
-**Objective:**  
+## Objective 
 This module performs the production phase of the LIE simulations for each ligand. It uses topology and equilibrated restart files generated in previous modules and runs molecular dynamics production runs to calculate binding free energies.  
 This module runs a replica because it is necessary for future free energy calculations with LIE.
 
