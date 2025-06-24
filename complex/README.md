@@ -72,7 +72,6 @@ Outputs:
 - `generate_complex_#.log`  
 - `complex_#_w.top`  
 - `complex_#_w.pdb`  
-- `complex_#_w.log`
 
 ---
 
@@ -96,4 +95,82 @@ Output:
 The file should be named `#.fep` where `#` matches the complex number.
 
 ---
+## Module 2 - Equilibration
+
+### Objective
+This module performs the equilibration phase for each protein–ligand complex prior to LIE (Linear Interaction Energy) simulations. It uses topology and FEP files generated in **Module 1** and produces restart (`.re`) files needed for production simulations in the next module.
+
+---
+
+### Inputs
+
+The following **base input files must be available** (included in this repository):
+
+- `eq1.inp` — minimization
+- `eq2.inp` — heating
+- `eq3.inp` — equilibration
+
+Also required from **Module 1**:
+
+- `complex_#_w.top`
+- `#.fep`
+
+Here, `#` refers to the ligand number (e.g., `1`, `2`, etc.).
+
+---
+
+### Workflow 
+### 1. Generate equilibration input files
+
+Run:
+
+```bash
+sbatch generate_eq_inp.sh
+```
+This script uses the base input files (`eq1.inp`, `eq2.inp`, `eq3.inp`) to generate individual input files for each protein–ligand complex.  
+If you need to change any equilibration parameter (e.g., time, temperature, restraints), modify the base `.inp` files before running the script.
+
+### Outputs:
+- `eq1_#.inp`
+- `eq2_#.inp`
+- `eq3_#.inp`
+
+Each file corresponds to a specific stage in the equilibration process for complex `#`.
+
+---
+
+### 2.Run the equilibration
+
+Submit all equilibration stages for each complex using:
+
+```bash
+sbatch equilibration.sh
+```
+### Inputs:
+- `eq1_#.inp`
+- `eq2_#.inp`
+- `eq3_#.inp`
+
+### Outputs:
+- `eq1_#.re`, `eq1_#.log`
+- `eq2_#.re`, `eq2_#.log`
+- `eq3_#.re`, `eq3_#.log`
+
+Each `.re` file is a **restart file** used to continue the simulation in the next stage,  
+while `.log` files contain runtime information.
+
+---
+
+### Equilibration Stages Overview
+
+| Stage | Description                          | Typical Duration |
+|-------|--------------------------------------|------------------|
+| eq1   | Energy minimization                  | 5 ps             |
+| eq2   | Heating (0 K → target temperature)   | 10 ps            |
+| eq3   | Constant temperature equilibration   | 25 ps            |
+
+> You can adjust simulation durations and other parameters by editing `eq1.inp`, `eq2.inp`, and `eq3.inp` before running the workflow.
+
+
+
 
