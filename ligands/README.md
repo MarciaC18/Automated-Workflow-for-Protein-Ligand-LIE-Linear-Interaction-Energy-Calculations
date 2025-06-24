@@ -56,24 +56,23 @@ This module performs the equilibration phase for each ligand prior to LIE simula
 1. Make sure the files `#_w.top` and `#.fep` are present in each ligand folder (`1/`, `2/`, etc.).
 
 2. Generate the equilibration input files in each folder:
-   
-   `python inputs-equilibration.py` This script will generate:
-<<<<<<< HEAD
-   
+   ```bash
+   python inputs-equilibration.py This script will generate:
+   ```
 -`eq1.inp`
 -`eq2.inp`
 -`eq3.inp`
 
 4. Submit the equilibration jobs for all ligands:
-=======
+
   - `eq1.inp`
   - `eq2.inp`
   - `eq3.inp`
 
 3. Submit the equilibration jobs for all ligands:
-
-   `sbatch equilibration.sh` This script will generate:
-
+  ```bash
+   sbatch equilibration.sh This script will generate:
+   ```
     - `eq1_#.re`: Restart file after minimization.
     - `eq2_#.re`: Restart file after heating.
     - `eq3_#.re`: Restart file after equilibration (used as input for production phase).
@@ -111,12 +110,13 @@ This module performs the production phase of the LIE simulations for each ligand
 1. Verify the presence of required input files (`#_w.top`, `eq#_3.re`, `#.fep`).
 
 2. Generate production input files:
-
-   python `generate_production_inputs.py`
-
+  ```bash
+   python generate_production_inputs.py
+   ```
 3. Submit the production jobs to the cluster for a 20 ps simulation following Singh and Warshel (2010):
-   
-   sbatch `prueba_prod.sh`
+ ```bash
+   sbatch prueba_prod.sh
+  ```
 
 4. Monitor the job status and wait for completion.
 
