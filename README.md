@@ -330,8 +330,7 @@ python analyze_LIE_poses_replica.py --ligand_dir ligand --complex_dir complex --
 ## Inputs
 
 Create a folder named `analysis-by-R-P` with the following structure:
-
-´´´
+~~~
 analysis-by-R-P/
 │
 ├── ligand/
@@ -361,7 +360,8 @@ analysis-by-R-P/
 │
 ├── analyze_LIE_poses_replica.py   <-- analysis script
 └── mdlog_energies.py              <-- module with get_q_energies function
-´´´
+~~~
+
 ***Make sure the necessary .log files for each replica and pose are correctly placed in their respective folders.***
 ## Requirements
 
