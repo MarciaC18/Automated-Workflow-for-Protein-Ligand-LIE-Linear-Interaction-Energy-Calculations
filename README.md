@@ -273,6 +273,251 @@ It includes:
   - Root Mean Square Error (RMSE)
 
 Use this analysis to evaluate the reliability of your LIE-calculated binding energies before proceeding with predictions for new ligands.
+---
+### 3.2 Comparison of Calculated ΔG for Test Ligands and Reference Inhibitors
+
+**Objective:**  
+Evaluate the relative binding affinity of test ligands by comparing their calculated binding free energies (ΔG<sub>calc</sub>) against known reference ligands.
+
+---
+
+**How to Run:** 
+
+Execute the script with the following command:
+
+```bash
+python plot-analyze-LIE.py
+```
+## Inputs
+
+Please review your result files in the `results/` directory. The script reads CSV files with the following naming format:
+
+```
+- `results/LIE_result_#.csv``
+```
+
+Each file must contain at least the following columns:
+
+- `ligand_name`: name or identifier of the ligand  
+- `dG_calc`: calculated binding free energy  
+- `stderr`: standard error of the ΔG_calc  
+
+> **NOTE**: If you want to compare your test ligands against reference ligands, ensure their names follow this format:  
+> `ligand_1, ligand_2, ligand_3, ...`  
+> These references must be included from the beginning of the protocol.
+## Outputs
+```
+- results/LIE_dG_comparison.png 
+```
+---
+### 3.3 Analysis of Reproducibility, Accuracy, and Precision of the LIE Method According to Ligand Conformational Changes
+
+## 3.3.1 LIE Calculation for reference ligands 
+
+**Objective**  
+Perform a thorough analysis of the reproducibility, accuracy, and precision of the LIE method to determine whether ligand conformational changes affect the statistical data obtained, and to assess if the best docking pose is the most suitable starting point for the LIE model.
+
+---
+
+**How to run the analysis**  
+Run the following command from the directory containing the scripts and analysis folders:
+
+```bash
+python analyze_LIE_poses_replica.py --ligand_dir ligand --complex_dir complex --alpha 0.68 --beta 0.11 --gamma 0.00 --ligand_name DIZ --n_replicas 2 --n_poses 2
+```
+***The parameters --alpha, --beta, --gamma, --ligand_name, --n_replicas, and --n_poses can be adjusted as needed.***
+
+## Inputs
+
+Create a folder named `analysis-by-R-P` with the following structure:
+
+´´´
+analysis-by-R-P/
+│
+├── ligand/
+│   ├── pose1/
+│   │   ├── 1/      <-- replica 1 (subfolder with .log files)
+│   │   │   ├── file1.log
+│   │   │
+│   │   ├── 2/      <-- replica 2
+│   │   │
+│   │   └── ...
+│   ├── pose2/
+│   │   └── 1/
+│   │
+│   └── ...
+│
+├── complex/
+│   ├── pose1/
+│   │   ├── 1/      <-- replica 1
+│   │   │
+│   │   ├── 2/      <-- replica 2
+│   │   │
+│   │   └── ...
+│   ├── pose2/
+│   │   └── 1/
+│   │
+│   └── ...
+│
+├── analyze_LIE_poses_replica.py   <-- analysis script
+└── mdlog_energies.py              <-- module with get_q_energies function
+´´´
+***Make sure the necessary .log files for each replica and pose are correctly placed in their respective folders.***
+## Requirements
+
+- Python 3.x
+- Required libraries installed (e.g., `numpy`, `csv`)
+- Scripts `analyze_LIE_poses_replica.py` and `mdlog_energies.py` located in the root `analysis-by-R-P` folder
+- `.log` files for each replica and pose of ligand and complex organized as described
+
+## Outputs
+
+The script will generate CSV files with results for each pose and replica in the current folder, named like:
+
+´´´
+results_LIE-poseX-rY.csv
+´´´
+
+where `X` is the pose number and `Y` is the replica number according to the input parameters.
+
+---
+
+### Notes
+
+- Carefully verify the folder structure and correct placement of `.log` files.  
+- The parameters `alpha`, `beta`, and `gamma` should be set according to the experimental values or the LIE model used.  
+- This calculation allows comparison of statistical variability between replicas and poses to evaluate the robustness of the LIE method against ligand conformational changes.
+---
+
+## 3.3.2 Saving calculated ΔG values for comparative analysis across poses and replicas
+
+***Objective**
+To generate and store a dataset with ΔG values from multiple poses and replicas for future analysis of their impact on the accuracy of binding free energy predictions.
+
+---
+***How to Run**
+
+Run the following command to create a unified dataset:
+
+```bash
+python combine_LIE-results.py -p 1 2 -r 1 2 -o Data_RP_LIE.csv
+```
+- p: Pose numbers to include (e.g., 1 2)
+
+- r: Replica numbers to include (e.g., 1 2)
+
+- o: Name of the output file
+
+***Adjust -p and -r according to your data.**
+
+## Inputs
+
+- Multiple `.csv` files with LIE calculation results, named in the format:  
+  `resultados_LIE-poseX-rY.csv`  
+  (where `X` is the pose number, and `Y` is the replica number)
+
+- Python script to combine the results:  
+  `combine_LIE-results.py`
+  
+---
+## Outputs
+**File:** `Data_RP_LIE.csv`  
+A merged table with the following columns:
+
+- **Ligand**: Name of the ligand.
+- **Replica**: Replica number from which the data was obtained.
+- **Pose**: Docking pose number.
+- **DG_calculated**: Binding free energy calculated using the LIE method.
+- **DG_experimental**: Experimental binding free energy (optional; can be filled manually).
+- **N_poses**: Number of entries (rows) from the source file.
+---
+## 3.3.3 Linear Regression Analysis: DG_calculated vs. DG_experimental and Absolute Error by Number of Poses
+
+***Objective**
+To evaluate the correlation between the calculated and experimental binding free energies (DG) using linear regression, and to analyze the absolute error across different docking poses.
+***How to Run**
+```bash
+python plot_DG_correlation.py
+```
+## Inputs
+- `Data_RP_LIE.csv`: A CSV file containing the columns `DG_calculated` and `DG_experimental` for each ligand, pose, and replica.
+---
+## Requirements
+
+- matplotlib  
+- seaborn  
+- pandas  
+- numpy  
+
+You can install them with:
+
+```bash
+pip install matplotlib seaborn pandas numpy
+```
+---
+## Outputs
+
+- `DG_calc_vs_exp_by_pose.png`
+
+A plot showing the correlation between **DG_calculated** and **DG_experimental** per pose, including an ideal correlation line and mean absolute error bands.
+
+---
+
+## Notes
+
+Make sure the **DG_experimental** column in `Data_RP_LIE.csv` is filled for all entries, as missing values will be ignored in the plot.
+---
+## 3.3.4 Statistical Analysis with Kruskal-Wallis Test
+
+***Objective**
+Perform a non-parametric Kruskal-Wallis test to determine whether the variables **Pose** and **Replica** cause significant changes in the results when the data does not follow a normal distribution.
+
+***How to Run**
+```bash
+python kruskal-wallis-test.py
+```
+## Inputs
+- `Data_RP_LIE.csv` (must include experimental DG values)
+---
+## Requirements
+- `pandas`
+- `numpy`
+- `scipy`
+
+You can install them with:
+
+```bash
+pip install pandas numpy scipy
+```
+---
+## Outputs
+
+- `summary_by_replica.csv`: Mean, standard deviation, and absolute error per ligand and replica.
+
+- `summary_by_pose.csv`: Mean, standard deviation, and absolute error per ligand and pose.
+
+- `kruskal_test_results_replicas.csv`: Kruskal-Wallis test results comparing replicas.
+
+- `kruskal_test_results_poses.csv`: Kruskal-Wallis test results comparing poses.
+## Notes
+
+If the p-value < 0.05 (95% confidence), this indicates a significant difference between the studied variables (poses or replicas), and attention should be given to how many poses or replicas generate more accurate results for the system.
+
+In this case, the null hypothesis is rejected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
