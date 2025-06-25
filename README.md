@@ -227,7 +227,7 @@ Make sure all required input folders and files are correctly set up before runni
 ---
 # 3. LIE Calculation Analysis
 
-### 3.1 Evaluation of the Accuracy and Precision of Calculated ΔG vs. Experimental ΔG
+## 3.1 Evaluation of the Accuracy and Precision of Calculated ΔG vs. Experimental ΔG
 
 **Objective:**  
 Assess the predictive quality of the calculated binding free energies (ΔG<sub>calc</sub>) by analyzing their correlation and error against the experimental values (ΔG<sub>exp</sub>).
@@ -274,7 +274,7 @@ It includes:
 
 Use this analysis to evaluate the reliability of your LIE-calculated binding energies before proceeding with predictions for new ligands.
 ---
-### 3.2 Comparison of Calculated ΔG for Test Ligands and Reference Inhibitors
+## 3.2 Comparison of Calculated ΔG for Test Ligands and Reference Inhibitors
 
 **Objective:**  
 Evaluate the relative binding affinity of test ligands by comparing their calculated binding free energies (ΔG<sub>calc</sub>) against known reference ligands.
@@ -310,7 +310,7 @@ Each file must contain at least the following columns:
 - results/LIE_dG_comparison.png 
 ```
 ---
-### 3.3 Analysis of Reproducibility, Accuracy, and Precision of the LIE Method According to Ligand Conformational Changes
+## 3.3 Analysis of Reproducibility, Accuracy, and Precision of the LIE Method According to Ligand Conformational Changes
 
 ## 3.3.1 LIE Calculation for reference ligands 
 
@@ -463,7 +463,7 @@ A plot showing the correlation between **DG_calculated** and **DG_experimental**
 
 ---
 
-## Notes
+### Notes
 
 Make sure the **DG_experimental** column in `Data_RP_LIE.csv` is filled for all entries, as missing values will be ignored in the plot.
 ---
@@ -499,7 +499,7 @@ pip install pandas numpy scipy
 - `kruskal_test_results_replicas.csv`: Kruskal-Wallis test results comparing replicas.
 
 - `kruskal_test_results_poses.csv`: Kruskal-Wallis test results comparing poses.
-## Notes
+### Notes
 
 If the p-value < 0.05 (95% confidence), this indicates a significant difference between the studied variables (poses or replicas), and attention should be given to how many poses or replicas generate more accurate results for the system.
 
