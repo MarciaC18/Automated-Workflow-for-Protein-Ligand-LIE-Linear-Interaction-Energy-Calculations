@@ -1,0 +1,2 @@
+ligand_name,pose,replica,alpha,beta,gamma,dG_calc,stderr,dG_exp
+DIZ,1,1,0.68,0.11,0.0,-8.39,0.59,0.0
