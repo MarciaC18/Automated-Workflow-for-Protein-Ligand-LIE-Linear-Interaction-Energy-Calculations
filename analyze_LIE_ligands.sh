@@ -19,7 +19,7 @@ mkdir -p logs
 mkdir -p results
 
 for i in $(seq 1 38); do
-    LIGAND_DIR="1.ligprep/ligand_${i}"
+    LIGAND_DIR="ligands/ligand_${i}"
     COMPLEX_DIR="complex/complex_${i}"
     OUTPUT_FILE="results/LIE_result_${i}.csv"
     LIGAND_NAME="ligand_${i}"
