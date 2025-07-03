@@ -48,11 +48,6 @@ This criterion is based on:
 Run the script:
 
 ```bash
-sbatch plot-energy.sh
-```
-This script calls:
-
-```bash
 python ligand-surrounding-energies.py
 ```
 It reads .log files from:
