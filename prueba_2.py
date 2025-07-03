@@ -2,7 +2,7 @@ import os
 import shutil
 import re
 
-LIGAND_BASE = "1.ligprep"
+LIGAND_BASE = "ligands"
 COMPLEX_BASE = "complex"
 CHECK_ERRORS_DIR = "check_errors"
 CHECK_LIGAND_DIR = os.path.join(CHECK_ERRORS_DIR, LIGAND_BASE)
